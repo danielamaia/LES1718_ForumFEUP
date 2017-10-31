@@ -1,17 +1,31 @@
-*.sw?
-.#*
-*#
-*~
+# Operating System Files
+
+*.DS_Store
+Thumbs.db
+
+# Build Files #
+
+bin
+target
+build/
+.gradle
+
+# Eclipse Project Files #
+
 .classpath
 .project
 .settings
-bin
-build
-target
-dependency-reduced-pom.xml
-*.sublime-*
-/scratch
-.gradle
-README.html
-.idea
+.springBeans
+
+# IntelliJ IDEA Files #
+
 *.iml
+*.ipr
+*.iws
+*.idea
+
+# Test files
+
+accessingdataneo4j.db
+dependency-reduced-pom.xml
+README.html
