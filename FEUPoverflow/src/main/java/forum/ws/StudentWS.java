@@ -1,5 +1,6 @@
-package hello;
+package forum.ws;
 
+import forum.domain.StudentRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,20 +10,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.inject.Inject;
 
 @RestController
-public class CustomerController {
+public class StudentWS {
 
     @Inject
-    private CustomerRepository customerRepository;
+    private StudentRepository studentRepository;
 
     @RequestMapping("/")
     public String index() {
         return "Greetings from Spring Boot!";
     }
 
-    @RequestMapping(value = "/customer/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/student/{id}", method = RequestMethod.GET)
     public ResponseEntity<String> getCostumerById(@PathVariable Long id){
-        String customer = customerRepository.findOne(id).getLastName();
-        return new ResponseEntity<String>(customer, HttpStatus.OK);
+        String student = studentRepository.findOne(id).getLastName();
+        return new ResponseEntity<String>(student, HttpStatus.OK);
     }
 
 }

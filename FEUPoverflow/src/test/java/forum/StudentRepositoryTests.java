@@ -14,12 +14,14 @@
  * limitations under the License.
  */
 
-package hello;
+package forum;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
+import forum.domain.Student;
+import forum.domain.StudentRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,20 +31,20 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class CustomerRepositoryTests {
+public class StudentRepositoryTests {
     @Autowired
     private TestEntityManager entityManager;
 
     @Autowired
-    private CustomerRepository customers;
+    private StudentRepository students;
 
     @Test
     public void testFindByLastName() {
-        Customer customer = new Customer("first", "last");
-        entityManager.persist(customer);
+        Student student = new Student("first", "last");
+        entityManager.persist(student);
 
-        List<Customer> findByLastName = customers.findByLastName(customer.getLastName());
+        List<Student> findByLastName = students.findByLastName(student.getLastName());
 
-        assertThat(findByLastName).extracting(Customer::getLastName).containsOnly(customer.getLastName());
+        assertThat(findByLastName).extracting(Student::getLastName).containsOnly(student.getLastName());
     }
 }
