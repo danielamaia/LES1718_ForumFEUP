@@ -1,5 +1,6 @@
 package forum.ws;
 
+import forum.domain.Student;
 import forum.domain.StudentRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,9 +22,9 @@ public class StudentWS {
     }
 
     @RequestMapping(value = "/student/{id}", method = RequestMethod.GET)
-    public ResponseEntity<String> getCostumerById(@PathVariable Long id){
-        String student = studentRepository.findOne(id).getLastName();
-        return new ResponseEntity<String>(student, HttpStatus.OK);
+    public ResponseEntity<Student> getStudentById(@PathVariable Long id){
+        Student student = studentRepository.findOne(id);
+        return new ResponseEntity<Student>(student, HttpStatus.OK);
     }
 
 }
