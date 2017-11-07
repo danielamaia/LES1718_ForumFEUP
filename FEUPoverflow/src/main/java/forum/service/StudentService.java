@@ -1,9 +1,10 @@
 package forum.service;
 
+import org.springframework.stereotype.Service;
+
 import forum.domain.Student;
 
-import java.util.List;
-
+@Service
 public interface StudentService {
 
     void createStudent(Student newStudent);

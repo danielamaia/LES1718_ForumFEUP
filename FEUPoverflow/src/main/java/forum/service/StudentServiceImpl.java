@@ -1,19 +1,20 @@
 package forum.service;
 
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Service;
+
 import forum.domain.Student;
 import forum.domain.StudentRepository;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.inject.Inject;
-import java.util.List;
-
+@Service
 public class StudentServiceImpl implements StudentService {
 
     @Inject
     private StudentRepository studentRepository;
 
     @Override
-    public void createNewStudent(Student newStudent) {
+    public void createStudent(Student newStudent) {
         studentRepository.save(newStudent);
     }
 
