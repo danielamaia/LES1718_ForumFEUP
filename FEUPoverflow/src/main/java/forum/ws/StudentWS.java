@@ -2,6 +2,7 @@ package forum.ws;
 
 import forum.domain.Student;
 import forum.domain.StudentRepository;
+import forum.service.StudentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +15,7 @@ import javax.inject.Inject;
 public class StudentWS {
 
     @Inject
-    private StudentRepository studentRepository;
+    private StudentService studentService;
 
     @RequestMapping("/")
     public String index() {
@@ -23,8 +24,8 @@ public class StudentWS {
 
     @RequestMapping(value = "/student/{id}", method = RequestMethod.GET)
     public ResponseEntity<Student> getStudentById(@PathVariable Long id){
-        Student student = studentRepository.findOne(id);
-        return new ResponseEntity<Student>(student, HttpStatus.OK);
+        Student student = studentService.getStudentById(id);
+        return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
 }
