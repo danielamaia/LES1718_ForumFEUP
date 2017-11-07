@@ -17,8 +17,8 @@ class App extends Component {
     <div class="login">
       <h1>Login</h1>
       <form method="post" action="index.html">
-        <p><input type="text" name="login" value="" placeholder="Username or Email"></input></p>
-        <p><input type="password" name="password" value="" placeholder="Password"></input></p>
+        <p><input type="text" name="login" value="" id="un" placeholder="Username or Email"></input></p>
+        <p><input type="password" name="password" value="" id="pw" placeholder="Password"></input></p>
         <p class="remember_me">
           <label>
             <input type="checkbox" name="remember_me" id="remember_me"></input>
@@ -26,6 +26,8 @@ class App extends Component {
           </label>
         </p>
         <p class="submit"><input type="submit" name="commit" value="Login"></input></p>
+        
+        
         <p class="submit"><input type="submit" name="commit" value="Sign Up"></input></p>
       </form>
     </div>
@@ -35,6 +37,7 @@ class App extends Component {
     </div>
   </section>
 
+ function register(){};
 
 </body>
       </div>
@@ -42,7 +45,6 @@ class App extends Component {
     );
   }
 }
-
 
 
 
