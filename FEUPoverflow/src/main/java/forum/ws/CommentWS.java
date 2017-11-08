@@ -1,7 +1,6 @@
 package forum.ws;
 
 import forum.domain.Comment;
-import forum.domain.Student;
 import forum.service.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

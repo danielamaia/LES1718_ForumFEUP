@@ -1,8 +1,8 @@
 package forum.service;
 
-import forum.domain.Comment;
-import forum.domain.Student;
 import org.springframework.stereotype.Service;
+
+import forum.domain.Comment;
 
 @Service
 public interface CommentService {
