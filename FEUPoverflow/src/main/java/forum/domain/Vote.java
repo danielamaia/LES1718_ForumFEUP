@@ -19,9 +19,9 @@ public class Vote {
     public Vote(Boolean value) {
         this.value = value;
     }
-
     @Override
     public String toString() {
+
         return String.format(
                 "Vote[id=%d, value='%s']",
                 id, value);
