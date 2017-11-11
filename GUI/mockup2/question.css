@@ -9,3 +9,30 @@
 body{
 background-color: #8c2d19 
 }
+#topics{
+    
+        margin-top: 100px;
+    text-align: center;
+}
+#myButton{
+    
+
+
+ -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#myButton:hover {
+    background-color: #ff0000; /* red */
+    color: black;}
+#myButton2{
+    
+
+
+ -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#myButton2:hover {
+    background-color: #00ff00; /* red */
+    color: black;}
