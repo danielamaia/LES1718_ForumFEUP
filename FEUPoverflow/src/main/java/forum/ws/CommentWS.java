@@ -32,7 +32,7 @@ public class CommentWS {
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/commment/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/comment/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Void> removeComment(@PathVariable Long id){
         Comment comment = commentService.getCommentById(id);
         commentService.removeComment(comment);
