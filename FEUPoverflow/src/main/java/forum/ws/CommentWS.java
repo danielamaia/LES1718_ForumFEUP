@@ -14,11 +14,6 @@ public class CommentWS {
     @Inject
     private CommentService commentService;
 
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
-    }
-
     @RequestMapping(value = "/comment/{id}", method = RequestMethod.GET)
     public ResponseEntity<Comment> getCommentById(@PathVariable Long id){
         Comment comment = commentService.getCommentById(id);

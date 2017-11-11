@@ -15,10 +15,6 @@ public class PubWS {
     @Inject
     private PubService pubService;
 
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
-    }
 
     @RequestMapping(value = "/pub/{id}", method = RequestMethod.GET)
     public ResponseEntity<Pub> getPubById(@PathVariable Long id){

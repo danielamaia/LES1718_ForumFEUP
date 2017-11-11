@@ -17,11 +17,6 @@ public class StudentWS {
     @Inject
     private StudentService studentService;
 
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
-    }
-
     @RequestMapping(value = "/student/{id}", method = RequestMethod.GET)
     public ResponseEntity<Student> getStudentById(@PathVariable Long id){
         Student student = studentService.getStudentById(id);

@@ -15,11 +15,6 @@ public class VoteWS {
     @Inject
     private VoteService voteService;
 
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
-    }
-
     @RequestMapping(value = "/vote/{id}", method = RequestMethod.GET)
     public ResponseEntity<Vote> getVoteById(@PathVariable Long id){
         Vote vote = voteService.getVoteById(id);

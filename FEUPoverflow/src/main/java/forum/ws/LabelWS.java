@@ -15,10 +15,6 @@ public class LabelWS {
     @Inject
     private LabelService labelService;
 
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
-    }
 
     @RequestMapping(value = "/label/{id}", method = RequestMethod.GET)
     public ResponseEntity<Label> getLabelById(@PathVariable Long id){
