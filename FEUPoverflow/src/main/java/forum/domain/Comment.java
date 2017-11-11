@@ -14,28 +14,19 @@ public class Comment
     @GeneratedValue(strategy= GenerationType.AUTO)
 
     private Long id;
-    private String desc;
+    private String content;
 
     protected Comment () {}
 
-    public Comment (String desc)
+    public Comment (String content)
     {
-        this.desc = desc;
+        this.content = content;
     }
 
     @Override
     public String toString() {
         return String.format(
-                "Comment[id=%d, desc='%s']",
-                id, desc);
+                "Comment[id=%d, content='%s']",
+                id, content);
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
 }

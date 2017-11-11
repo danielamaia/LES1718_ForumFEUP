@@ -2,8 +2,6 @@ package forum.service;
 
 import forum.domain.Label;
 import forum.domain.LabelRepository;
-import forum.domain.Pub;
-import forum.domain.PubRepository;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -26,9 +24,7 @@ public class LabelServiceImpl implements LabelService {
 
     @Override
     public void updateLabel(Label newLabel) {
-        Label label = labelRepository.findOne(newLabel.getId());
-        label = newLabel;
-        labelRepository.save(label);
+        labelRepository.save(newLabel);
     }
 
     @Override

@@ -1,19 +1,22 @@
 package forum.ws;
 
-import forum.domain.Student;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import forum.domain.Vote;
-import forum.service.*;
+import forum.service.VoteService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
+import java.io.IOException;
 
 @RestController
 public class VoteWS {
 
     @Inject
     private VoteService voteService;
+    ObjectMapper objectMapper = new ObjectMapper();
+
 
     @RequestMapping(value = "/vote/{id}", method = RequestMethod.GET)
     public ResponseEntity<Vote> getVoteById(@PathVariable Long id){
@@ -22,9 +25,14 @@ public class VoteWS {
     }
 
     @RequestMapping(value = "/vote", method = RequestMethod.POST)
-    public ResponseEntity<Void> getStudentById(@RequestBody VoteDTO vote){
-        Vote newVote = VoteMapper.INSTANCE.toVote(vote);
-        voteService.createVote(newVote);
+    public ResponseEntity<Void> createVote(@RequestBody String voteJson){
+        Vote vote = null;
+        try {
+            vote = objectMapper.readValue(voteJson, Vote.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        voteService.createVote(vote);
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 

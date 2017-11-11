@@ -1,7 +1,5 @@
 package forum.service;
 
-import forum.domain.Pub;
-import forum.domain.PubRepository;
 import forum.domain.Vote;
 import forum.domain.VoteRepository;
 import org.springframework.stereotype.Service;
@@ -26,9 +24,7 @@ public class VoteServiceImpl implements VoteService {
 
     @Override
     public void updateVote(Vote newVote) {
-        Vote vote = voteRepository.findOne(newVote.getId());
-        vote = newVote;
-        voteRepository.save(vote);
+        voteRepository.save(newVote);
     }
 
     @Override

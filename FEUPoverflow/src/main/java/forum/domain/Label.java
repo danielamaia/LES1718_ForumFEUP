@@ -1,4 +1,3 @@
-// tag::sample[]
 package forum.domain;
 
 import javax.persistence.Entity;
@@ -13,28 +12,20 @@ public class Label {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     private String name;
-    private String category;
-    private String descri;
+
 
     protected Label() {}
 
-    public Label(String name, String category, String descri) {
+    public Label(String name) {
         this.name = name;
-        this.category = category;
-        this.descri = descri;
     }
 
     @Override
     public String toString() {
         return String.format(
-                "Student[id=%d, name='%s', category='%s',  descri='%s']",
-                id, name, category, descri);
+                "Student[id=%d, name='%s']",
+                id, name);
     }
 
-// end::sample[]
-
-	public Long getId() {
-		return id;
-	}
 }
 
