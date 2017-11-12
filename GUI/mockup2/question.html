@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html>
-
-  
-  <head>
-      <div id= "header">
-    <link href="question.css" rel="stylesheet">
-          <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
-         
-          <title>FEUPOverflow</title> 
-           
-          </div>
-        </head>
-    <div id= "logo">   
-         <img src="feup.png" position="absolute" height="100" width="550" alt='logo'/>
-
-    </div>
-     <body > 
-        
-               
-<div id= "topics">
-     <textarea rows="20" cols="100">
-Write your question or start a discussion here
-</textarea> 
-    <br>
-         <textarea rows="3" cols="40">
-your tags here</textarea> 
-    <br>
-    <button id="myButton" class="float-left submit-button" >Cancel</button>
-
-<script type="text/javascript">
-    document.getElementById("myButton").onclick = function () {
-        location.href = "index.html";
-    };
-</script>
-     <button id="myButton2" class="float-left submit-button" >Done!</button>
-
-         </div>
-    </body>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="question.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<title>FEUPOverflow</title>
+</head>
+<div id= "logo">   
+	<img src="feup.png" position="absolute" height="100" width="550" alt='logo'/>
+</div>
+<body >
+	<div class="container-fluid">
+		<form id= "topics">
+			<input type="text" name="title" placeholder="Title: What's your question?" class="col-md-6">
+			<br>
+			<input type="text" id="content" name="content" class="col-md-6">
+			<br>
+			<button id="btn-cancel" class="btn btn-default" href="/index.html">Cancel</button>
+			<!--<script type="text/javascript">
+				document.getElementById("btn-cancel").onclick = function () {
+					location.href = "/index.html";
+				};
+			</script>-->
+			<button id="btn-submit" class="btn btn-primary" >Submit</button>
+		</form>
+	</div>
+</body>
 </html>

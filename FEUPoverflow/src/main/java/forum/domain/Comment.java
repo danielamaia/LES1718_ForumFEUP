@@ -1,10 +1,7 @@
 package forum.domain;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Comment
@@ -15,17 +12,19 @@ public class Comment
     private Long id;
     private String content;
 
-    protected Comment () {}
-
-    public Comment (String content)
-    {
-        this.content = content;
+    public Long getId() {
+        return id;
     }
 
-    @Override
-    public String toString() {
-        return String.format(
-                "Comment[id=%d, content='%s']",
-                id, content);
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }

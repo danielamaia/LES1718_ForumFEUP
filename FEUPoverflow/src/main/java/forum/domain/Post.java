@@ -14,20 +14,30 @@ public class Post {
     private Long id;
     private String title;
     private String content;
-    private String category;
 
-    protected Post() {}
+    public Long getId() {
+        return id;
+    }
 
-    public Post(String content, String category) {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
         this.content = content;
-        this.category = category;
     }
 
-    @Override
-    public String toString() {
-        return String.format(
-                "Post[id=%d, content='%s', title='%s', category='%s']",
-                id, content, title, category);
-    }
 }
 

@@ -17,13 +17,13 @@ public class PostWS {
     private PostService postService;
     ObjectMapper objectMapper = new ObjectMapper();
 
-    @RequestMapping(value = "/pub/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/post/{id}", method = RequestMethod.GET)
     public ResponseEntity<Post> getPostById(@PathVariable Long id){
         Post post = postService.getPostById(id);
         return new ResponseEntity<>(post, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/pub", method = RequestMethod.POST)
+    @RequestMapping(value = "/post", method = RequestMethod.POST)
     public ResponseEntity<Void> createPost(@RequestBody String postJson){
         Post post = null;
         try {
@@ -35,7 +35,7 @@ public class PostWS {
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/pub/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/post/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Void> removePost(@PathVariable Long id){
         Post post = postService.getPostById(id);
         postService.removePost(post);

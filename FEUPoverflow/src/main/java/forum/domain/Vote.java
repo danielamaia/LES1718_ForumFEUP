@@ -14,20 +14,6 @@ public class Vote {
     private Long id;
     private Boolean value;
 
-    public Vote() {}
-
-    public Vote(Boolean value) {
-        this.setValue(value);
-    }
-
-    @Override
-    public String toString() {
-
-        return String.format(
-                "Vote[id=%d, value='%s']",
-                getId(), getValue());
-    }
-
     public Long getId() {
         return id;
     }
