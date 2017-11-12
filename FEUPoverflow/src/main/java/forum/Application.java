@@ -29,21 +29,6 @@ public class Application {
 			repository.save(new Student("David", "Palmer"));
 			repository.save(new Student("Michelle", "Dessler"));
 
-			// fetch all students
-			log.info("Students found with findAll():");
-			log.info("-------------------------------");
-			for (Student student : repository.findAll()) {
-				log.info(student.toString());
-			}
-			log.info("");
-
-			// fetch an individual student by ID
-			Student student = repository.findOne(1L);
-			log.info("Student found with findOne(1L):");
-			log.info("--------------------------------");
-			log.info(student.toString());
-			log.info("");
-
 			// fetch students by last name
 			log.info("Student found with findByLastName('Bauer'):");
 			log.info("--------------------------------------------");
