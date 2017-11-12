@@ -1,27 +1,22 @@
 #logo {
-  background-color: #222;
-  height:100px;
-  width: 100%;
+    background-color: #222;
+    height: 100px;
+    width: 100%;
 }
 
-body{
-    background-color: #8c2d19 
+body {
+    background-color: #8c2d19
 }
 
-
-#topics{
+#topics {
     margin-top: 100px;
     text-align: center;
 }
 
-
-
-
-input{
+input {
     margin: 10px !important;
 }
 
-
-input#content{
+input#content {
     height: 155px;
 }

@@ -1,28 +1,39 @@
-
-
-#logo {
-  background-color: #222;
-  height:100px;
-    width: 100%;
+#header {
+    background-color: #ffffff;
 }
 
-body{
-background-color: #8c2d19 
+#log {
+    height: auto;
+    width: auto;
+    max-width: 20%;
+    max-height: 20%;
+    margin-left: 10%;
 }
 
 
-
-#topics{
-    
-    
-    margin-top: 100px;
-    
+body {
+    background-color: #8c2d19
 }
 
-#myButton{
-    
-margin-top: 10px;
-        background-color: black; 
+#margin {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #ffffff
+}
+
+#topics {
+
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #ffffff
+
+}
+
+#myButton {
+
+    margin-top: 10px;
+    background-color: black;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -30,15 +41,13 @@ margin-top: 10px;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    
-    
-    
 
- -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 }
 
 #myButton:hover {
     background-color: #ffffff; /* red */
-    color: black;}
+    color: black;
+}
 
