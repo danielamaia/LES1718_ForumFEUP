@@ -1,12 +1,10 @@
 // tag::sample[]
 package forum.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "Student")
 public class Student {
 
     @Id
@@ -35,6 +33,10 @@ public class Student {
 		return id;
 	}
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -42,5 +44,6 @@ public class Student {
 	public String getLastName() {
 		return lastName;
 	}
+
 }
 

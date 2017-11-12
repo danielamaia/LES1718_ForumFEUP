@@ -38,15 +38,17 @@ public class StudentWS {
     }
 
     @RequestMapping(value = "/student/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<Void> updateStudent(@RequestBody String studentJson){
+    public ResponseEntity<Void> updateStudent(@PathVariable Long id, @RequestBody String studentJson){
         Student student = null;
         try {
             student = objectMapper.readValue(studentJson, Student.class);
+            student.setId(id);
+            studentService.updateStudent(student);
+            return new ResponseEntity<Void>(HttpStatus.OK);
         } catch (IOException e) {
             e.printStackTrace();
+            return new ResponseEntity<Void>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        studentService.updateStudent(student);
-        return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
     @RequestMapping(value = "/student/{id}", method = RequestMethod.DELETE)

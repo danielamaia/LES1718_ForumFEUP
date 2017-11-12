@@ -22,20 +22,7 @@ public class Application {
 	@Bean
 	public CommandLineRunner demo(StudentRepository repository) {
 		return (args) -> {
-			// save a couple of students
-			repository.save(new Student("Jack", "Bauer"));
-			repository.save(new Student("Chloe", "O'Brian"));
-			repository.save(new Student("Kim", "Bauer"));
-			repository.save(new Student("David", "Palmer"));
-			repository.save(new Student("Michelle", "Dessler"));
 
-			// fetch students by last name
-			log.info("Student found with findByLastName('Bauer'):");
-			log.info("--------------------------------------------");
-			for (Student bauer : repository.findByLastName("Bauer")) {
-				log.info(bauer.toString());
-			}
-			log.info("");
 		};
 	}
 
