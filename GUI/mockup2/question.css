@@ -1,7 +1,14 @@
-#logo {
-    background-color: #222;
-    height: 100px;
-    width: 100%;
+#header {
+    background-color: #ffffff;
+}
+
+#log {
+    height: auto;
+    width: auto;
+    max-width: 20%;
+    max-height: 20%;
+    margin-left: 5%;
+
 }
 
 body {
