@@ -6,10 +6,8 @@ import forum.service.PostService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -22,7 +20,8 @@ public class PostWS {
     ObjectMapper objectMapper = new ObjectMapper();
 
     @RequestMapping("/post")
-    public String index() {
+    public String index(@RequestParam(value="title", required=false) String title, Model model) {
+        model.addAttribute("title", "usado para passar dados do controlador para o html");
         return "post";
     }
 

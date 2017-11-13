@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
     <title>Post</title>
@@ -20,14 +20,32 @@
     <title>FEUPOverflow</title>
     <div id="header">
         <title>FEUPOverflow</title>
-        <img id="logo" src="../img/feup.png" alt='logo'/>
-    </div>
+        <img src="https://i.imgur.com/mp8zMLB.png"/></div>
 </head>
+
+<script>
+
+    function submit() {
+        alert("submitter")
+
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState == 4)
+                console.log(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", "/post/40", true); // true for asynchronous
+        xmlHttp.send(null);
+
+    }
+
+</script>
+
 <body>
 <div class="container-fluid" align="center">
     <form id="askquestion-form" method="post">
         <input type="text" name="title" placeholder="Title: What's your question?" class="col-md-6"/>
         <input type="text" id="content" name="content" class="col-md-6"/>
+        <p th:text="'Hello, ' + ${title} + '!'" />
     </form>
     <div id="askquestion-buttons">
         <button id="btn-cancel" class="btn btn-default">Cancel</button>
