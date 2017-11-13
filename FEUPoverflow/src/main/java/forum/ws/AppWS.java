@@ -9,7 +9,7 @@ public class AppWS {
 
     @RequestMapping("/")
     public String index() {
-        return "greeting";
+        return "index";
     }
 
 }
