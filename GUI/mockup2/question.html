@@ -12,19 +12,21 @@
 	<title>FEUPOverflow</title>
 	<div id="header">
 		<title>FEUPOverflow</title>
-		<img id="log" src="feup.png" alt='logo'/>
+		<img id="logo" src="feup.png" alt='logo'/>
 	</div>
 </head>
 <body >
-	<div class="container-fluid">
-		<form id= "topics">
+	<div class="container-fluid" align="center">
+		<form id= "askquestion-form" method="post">
 			<input type="text" name="title" placeholder="Title: What's your question?" class="col-md-6">
 			<br>
 			<input type="text" id="content" name="content" class="col-md-6">
 			<br>
-			<button id="btn-cancel" class="btn btn-default" href="/index.html">Cancel</button>
-			<button id="btn-submit" class="btn btn-primary" onclick="submit()">Submit</button>
 		</form>
+		<div id="askquestion-buttons">
+			<button id="btn-cancel" class="btn btn-default">Cancel</button>
+			<button id="btn-submit" class="btn btn-primary"  onclick="submit()">Submit</button>
+		</div>
 	</div>
 </body>
 </html>

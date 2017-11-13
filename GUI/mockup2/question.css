@@ -2,7 +2,7 @@
     background-color: #ffffff;
 }
 
-#log {
+#logo {
     height: auto;
     width: auto;
     max-width: 20%;
@@ -18,7 +18,7 @@ body {
 #topics {
     margin-top: 100px;
     text-align: center;
-}
+	}
 
 input {
     margin: 10px !important;
