@@ -20,16 +20,23 @@ public class PostWS {
     ObjectMapper objectMapper = new ObjectMapper();
 
     @RequestMapping("/post")
-    public String index(@RequestParam(value="title", required=false) String title, Model model) {
+    public String create(@RequestParam(value="title", required=false) String title, Model model) {
         model.addAttribute("title", "usado para passar dados do controlador para o html");
         return "post-create";
     }
 
-    @RequestMapping(value = "/post/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Post> getPostById(@PathVariable Long id){
+    @RequestMapping("/post/{id}")
+    public String read(@PathVariable Long id, Model model) {
         Post post = postService.getPostById(id);
-        return new ResponseEntity<>(post, HttpStatus.OK);
+        model.addAttribute(post);
+        return "post-read";
     }
+
+//    @RequestMapping(value = "/post/{id}", method = RequestMethod.GET)
+//    public ResponseEntity<Post> getPostById(@PathVariable Long id){
+//        Post post = postService.getPostById(id);
+//        return new ResponseEntity<>(post, HttpStatus.OK);
+//    }
 
     @RequestMapping(value = "/post", method = RequestMethod.POST)
     public ResponseEntity<Void> createPost(@RequestBody String postJson){
