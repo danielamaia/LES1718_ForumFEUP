@@ -22,7 +22,7 @@ public class PostWS {
     @RequestMapping("/post")
     public String index(@RequestParam(value="title", required=false) String title, Model model) {
         model.addAttribute("title", "usado para passar dados do controlador para o html");
-        return "post";
+        return "post-create";
     }
 
     @RequestMapping(value = "/post/{id}", method = RequestMethod.GET)

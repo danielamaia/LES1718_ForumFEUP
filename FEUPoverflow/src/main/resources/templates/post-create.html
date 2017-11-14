@@ -18,10 +18,24 @@
             crossorigin="anonymous"></script>
     <link href="post.css" rel="stylesheet"/>
     <title>FEUPOverflow</title>
-    <div id="header">
+    <div id="header" style="background-color: #ffffff;">
         <title>FEUPOverflow</title>
-        <img src="https://i.imgur.com/mp8zMLB.png"/></div>
+        <img src="https://i.imgur.com/mp8zMLB.png" style="height: auto; width: auto; max-width: 20%; max-height: 20%; margin-left: 5%;"/></div>
 </head>
+<body>
+<div class="container-fluid" align="center">
+    <form id="askquestion-form" method="post">
+        <input type="text" name="title" placeholder="Title: What's your question?" class="col-md-6" style="margin: 10px"/>
+        <input type="text" id="content" name="content" class="col-md-6" style="margin: 10px; height: 65px;"/>
+        <!--<p th:text="'Hello, ' + ${title} + '!'" />-->
+    </form>
+    <div id="askquestion-buttons">
+        <button id="btn-cancel" class="btn btn-default">Cancel</button>
+        <button id="btn-submit" class="btn btn-primary" onclick="submit()">Submit</button>
+    </div>
+</div>
+</body>
+</html>
 
 <script>
 
@@ -43,7 +57,7 @@
 
     function formToJson(formArray){
         stringJson = "{";
-        for (var i = 0, len = formArray.length; len>i; i++) { //esta verificacao len>i teve de ser ao contrario pq o spring queixa-se do simbolo <
+        for (var i = 0, len = formArray.length; len>i; i++) { //esta verificacao len>i teve de ser ao contrario pq o spring queixa-se do simbolo de menor
             stringJson+= "\""
             stringJson+= formArray[i].name;
             stringJson+="\":\"";
@@ -57,18 +71,3 @@
     }
 
 </script>
-
-<body>
-<div class="container-fluid" align="center">
-    <form id="askquestion-form" method="post">
-        <input type="text" name="title" placeholder="Title: What's your question?" class="col-md-6"/>
-        <input type="text" id="content" name="content" class="col-md-6"/>
-        <p th:text="'Hello, ' + ${title} + '!'" />
-    </form>
-    <div id="askquestion-buttons">
-        <button id="btn-cancel" class="btn btn-default">Cancel</button>
-        <button id="btn-submit" class="btn btn-primary" onclick="submit()">Submit</button>
-    </div>
-</div>
-</body>
-</html>
