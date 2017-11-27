@@ -1,10 +1,13 @@
 package forum.ws;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import forum.domain.Comment;
+import forum.domain.Post;
 import forum.service.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
@@ -17,10 +20,17 @@ public class CommentWS {
     private CommentService commentService;
     ObjectMapper objectMapper = new ObjectMapper();
 
-    @RequestMapping(value = "/comment/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Comment> getCommentById(@PathVariable Long id){
+    @RequestMapping("/comment")
+    public String create(@RequestParam(value="content", required = false) String contet, Model model){
+        model.addAttribute("content", "passar dados");
+        return "comment-create";
+    }
+
+    @RequestMapping("/comment/{id}")
+    public String read(@PathVariable Long id, Model model){
         Comment comment = commentService.getCommentById(id);
-        return new ResponseEntity<>(comment, HttpStatus.OK);
+        model.addAttribute(comment);
+        return "comment-read";
     }
 
     @RequestMapping(value = "/comment", method = RequestMethod.POST)
