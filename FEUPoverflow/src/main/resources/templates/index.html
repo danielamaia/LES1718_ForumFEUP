@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
@@ -46,6 +46,7 @@
             <tbody>
             <tr>
                 <td id="titel">Titulo questao 1</td>
+                <p th:text="${post.title}" class="col-md-6" style="margin: 10px"/>
                 <script type="text/javascript">
                     document.getElementById("titel").onclick = function () {
                         location.href = "post-read.html";

@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8"/>
-    <div id="header" style="background-color: #ffffff;">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <div id="header">
+        <link href="post-r.css" rel="stylesheet">
         <title>FEUPOverflow</title>
-        <img src="https://i.imgur.com/mp8zMLB.png" style="height: auto; width: auto; max-width: 20%; max-height: 20%; margin-left: 5%;"/>
+        <img id="img" src="https://i.imgur.com/mp8zMLB.png"
+             style="height: auto; width: auto; max-width: 20%; max-height: 20%; margin-left: 5%;"/>
+
+        <script type="text/javascript">
+            document.getElementById("img").onclick = function () {
+                location.href = "index.html";
+            };
+        </script>
+
     </div>
 </head>
 <body>
