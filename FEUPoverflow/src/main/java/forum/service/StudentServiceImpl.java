@@ -5,10 +5,11 @@ import org.springframework.stereotype.Service;
 
 import forum.domain.Student;
 import forum.domain.StudentRepository;
+import javax.inject.Inject;
 
 @Service
 public class StudentServiceImpl implements StudentService {
-
+    @Inject
     private StudentRepository studentRepository;
 
     @Override

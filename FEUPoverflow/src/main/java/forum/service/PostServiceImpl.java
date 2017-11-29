@@ -3,12 +3,12 @@ package forum.service;
 import forum.domain.Post;
 import forum.domain.PostRepository;
 import org.springframework.stereotype.Service;
-
+import javax.inject.Inject;
 
 @Service
 public class PostServiceImpl implements PostService {
 
-
+    @Inject
     private PostRepository postRepository;
 
     @Override

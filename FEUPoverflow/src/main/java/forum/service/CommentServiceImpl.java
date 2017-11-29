@@ -3,11 +3,13 @@ package forum.service;
 import forum.domain.Comment;
 import forum.domain.CommentRepository;
 import org.springframework.stereotype.Service;
+import javax.inject.Inject;
 
 
 @Service
 public class CommentServiceImpl implements CommentService {
 
+    @Inject
     private CommentRepository commentRepository;
 
     @Override

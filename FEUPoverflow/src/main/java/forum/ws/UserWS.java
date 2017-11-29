@@ -12,7 +12,7 @@ import java.io.IOException;
 
 @RestController
 public class UserWS {
-
+    @Inject
     private UserService userService;
     ObjectMapper objectMapper = new ObjectMapper();
 
