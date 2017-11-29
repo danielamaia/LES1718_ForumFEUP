@@ -10,7 +10,6 @@ import forum.domain.StudentRepository;
 @Service
 public class StudentServiceImpl implements StudentService {
 
-    @Inject
     private StudentRepository studentRepository;
 
     @Override

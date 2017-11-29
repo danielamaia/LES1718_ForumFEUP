@@ -9,7 +9,6 @@ import javax.inject.Inject;
 @Service
 public class VoteServiceImpl implements VoteService {
 
-    @Inject
     private VoteRepository voteRepository;
 
     @Override

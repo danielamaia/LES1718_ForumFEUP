@@ -2,7 +2,6 @@ package forum.ws;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import forum.domain.Label;
-import forum.domain.Vote;
 import forum.service.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +13,6 @@ import java.io.IOException;
 @RestController
 public class LabelWS {
 
-    @Inject
     private LabelService labelService;
     ObjectMapper objectMapper = new ObjectMapper();
 

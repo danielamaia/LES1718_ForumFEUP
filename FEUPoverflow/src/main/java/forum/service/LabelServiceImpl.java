@@ -4,12 +4,10 @@ import forum.domain.Label;
 import forum.domain.LabelRepository;
 import org.springframework.stereotype.Service;
 
-import javax.inject.Inject;
 
 @Service
 public class LabelServiceImpl implements LabelService {
 
-    @Inject
     private LabelRepository labelRepository;
 
     @Override

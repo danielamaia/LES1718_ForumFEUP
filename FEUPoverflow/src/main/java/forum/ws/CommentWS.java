@@ -3,7 +3,6 @@ package forum.ws;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import forum.domain.Comment;
-import forum.domain.Post;
 import forum.service.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +15,6 @@ import java.io.IOException;
 @RestController
 public class CommentWS {
 
-    @Inject
     private CommentService commentService;
     ObjectMapper objectMapper = new ObjectMapper();
 

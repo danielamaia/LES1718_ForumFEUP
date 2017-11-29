@@ -1,7 +1,9 @@
 package forum.service;
 
-import forum.domain.Comment;
 import forum.domain.CommentRepository;
+import forum.domain.Label;
+import forum.domain.Post;
+import forum.domain.PostRepository;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.core.api.annotation.Inject;
 import org.jboss.arquillian.junit.Arquillian;
@@ -15,37 +17,39 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.*;
 
 @RunWith(Arquillian.class)
-public class CommentServiceImplTest {
+public class PostServiceImplTest {
+
     @Inject
-    private CommentRepository commentRepository;
+    private PostRepository postRepository;
 
     @Test
-    public void createComment() throws Exception {
-        Comment comment= new Comment();
-        //Long id = 12L;
+    public void createPost() throws Exception {
+
+        Post post= new Post();
         String content= "Test";
-        comment.setContent(content);
-        commentRepository.save(comment);
-        Comment actualComment= commentRepository.findCommentByContent(content);
-        Assert.assertEquals(comment, actualComment);
+        post.setContent(content);
+        Post actualPost= postRepository.findPostByContent(content);
+        Assert.assertEquals(post, actualPost);
     }
 
     @Test
-    public void getCommentById() throws Exception {
+    public void getPostById() throws Exception {
+
+
     }
 
     @Test
-    public void updateComment() throws Exception {
+    public void updatePost() throws Exception {
     }
 
     @Test
-    public void removeComment() throws Exception {
+    public void removePost() throws Exception {
     }
 
     @Deployment
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
-                .addClass(CommentServiceImpl.class)
+                .addClass(PostServiceImpl.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 

@@ -1,8 +1,6 @@
 package forum.ws;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import forum.domain.Comment;
-import forum.domain.Student;
 import forum.domain.User;
 import forum.service.*;
 import org.springframework.http.HttpStatus;
@@ -15,7 +13,6 @@ import java.io.IOException;
 @RestController
 public class UserWS {
 
-    @Inject
     private UserService userService;
     ObjectMapper objectMapper = new ObjectMapper();
 
