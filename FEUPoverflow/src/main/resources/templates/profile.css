@@ -1,0 +1,46 @@
+#header {
+    background-color: #ffffff;
+}
+
+#log {
+    height: auto;
+    width: auto;
+    max-width: 20%;
+    max-height: 20%;
+    margin-left: 5%;
+
+}
+
+body {
+    background-color: #8c2d19
+}
+
+#margin {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #ffffff;
+}
+
+#topics {
+
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#avatar {
+    margin-top: 2%;
+    float: left;
+    max-width: 150px;
+    max-height: 170px;
+}
+
+#caracteristicas{
+    margin-top: 6%;
+    margin-left: 20%;
+}
+
+#edit{
+    margin-top: 3%;
+    float: right;
+}
