@@ -1,15 +1,13 @@
 package forum.ws;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import forum.domain.Comment;
-import forum.service.*;
+import forum.service.CommentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.inject.Inject;
 import java.io.IOException;
 
 @RestController
