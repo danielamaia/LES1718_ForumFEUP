@@ -1,0 +1,55 @@
+package forum.service;
+
+import forum.domain.Comment;
+import forum.domain.CommentRepository;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import javax.inject.Inject;
+
+public class CommentServiceImplTest {
+
+    @Inject
+    private CommentRepository commentRepository;
+
+    @Before
+    public void setUp() throws Exception {
+
+
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void createComment() throws Exception {
+       //Mock acting like commentRepository
+//Use mockito
+
+        Comment comment= new Comment();
+        //Long id = 12L;
+        String content= "Test";
+        comment.setContent(content);
+        System.err.println(commentRepository);
+        System.err.println(comment);
+        commentRepository.save(comment);
+        Comment actualComment= commentRepository.findCommentByContent(content);
+        Assert.assertEquals(comment, actualComment);
+    }
+
+    @Test
+    public void getCommentById() throws Exception {
+    }
+
+    @Test
+    public void updateComment() throws Exception {
+    }
+
+    @Test
+    public void removeComment() throws Exception {
+    }
+
+}
