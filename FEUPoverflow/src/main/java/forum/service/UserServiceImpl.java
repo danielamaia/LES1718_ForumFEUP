@@ -4,7 +4,6 @@ import forum.domain.User;
 import forum.domain.UserRepository;
 import org.springframework.stereotype.Service;
 
-import javax.inject.Inject;
 
 @Service
 public class UserServiceImpl implements UserService {
