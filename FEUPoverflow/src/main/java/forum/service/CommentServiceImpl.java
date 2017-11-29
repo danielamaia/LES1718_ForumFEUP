@@ -4,9 +4,9 @@ import forum.domain.Comment;
 import forum.domain.CommentRepository;
 import forum.domain.Student;
 import forum.domain.StudentRepository;
+import org.jboss.arquillian.core.api.annotation.Inject;
 import org.springframework.stereotype.Service;
 
-import javax.inject.Inject;
 
 @Service
 public class CommentServiceImpl implements CommentService {

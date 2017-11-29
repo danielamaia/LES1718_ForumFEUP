@@ -2,33 +2,25 @@ package forum.service;
 
 import forum.domain.Comment;
 import forum.domain.CommentRepository;
-import org.junit.After;
+import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.arquillian.core.api.annotation.Inject;
+import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.shrinkwrap.api.ShrinkWrap;
+import org.jboss.shrinkwrap.api.asset.EmptyAsset;
+import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
-import javax.inject.Inject;
+import static org.junit.Assert.*;
 
+@RunWith(Arquillian.class)
 public class CommentServiceImplTest {
-
     @Inject
     private CommentRepository commentRepository;
 
-    @Before
-    public void setUp() throws Exception {
-
-
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
-
     @Test
     public void createComment() throws Exception {
-       //Mock acting like commentRepository
-//Use mockito
-
         Comment comment= new Comment();
         //Long id = 12L;
         String content= "Test";
@@ -50,6 +42,13 @@ public class CommentServiceImplTest {
 
     @Test
     public void removeComment() throws Exception {
+    }
+
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(CommentServiceImpl.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
 }
