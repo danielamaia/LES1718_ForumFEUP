@@ -23,7 +23,8 @@
 }
 
 body {
-    background-color: #8c2d19
+    background-color: #8c2d19;
+    text-align: justify;
 }
 
 #topics {
