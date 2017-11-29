@@ -18,10 +18,53 @@
     </div>
 </head>
 <body>
-    <div class="container-fluid" align="center">
-        <p th:text="${post.title}" class="col-md-6" style="margin: 10px"/>
-        <br/>
-        <p th:text="${post.content}" class="col-md-6"/>
+<div class="container-fluid" align="center">
+    <p th:text="${post.title}" class="col-md-6" style="margin: 10px"/>
+    <br/>
+    <p th:text="${post.content}" class="col-md-6"/>
+</div>
+
+<div id="margin">
+    <h1>Why is a parameter pack allowed after default arguments?</h1>
+    <div id="topics">
+        <h5 id="descri">Maybe I'm missing something obvious, but the following compiles and runs, and I'm not sure why.
+            I am aware
+            of this, but in the example below the position of the parameter pack and the default argument are reversed.
+            Doesn't it violate the rule that default arguments have to appear last? The parameter pack cannot have a
+            default value.</h5>
+
+        <h6 id="user">user</h6>
     </div>
+    <div id="carac">
+        <h6>votes  coments  views</h6>
+    </div>
+    <div id="comments">
+
+        <h5>As an addition to the great answer by rsp, it's also worth noting that this behavior makes logical sense.
+            Non-default, non-parameter-pack arguments cannot follow a default argument without resulting the in the
+            requirement that the default argument has to be specified--in which case it is no longer a default
+            argument.</h5>
+
+        <h6 id="user">user</h6>
+        <h6 id="votes">votes</h6>
+
+        <h5>As an addition to the great answer by rsp, it's also worth noting that this behavior makes logical sense.
+            Non-default, non-parameter-pack arguments cannot follow a default argument without resulting the in the
+            requirement that the default argument has to be specified--in which case it is no longer a default
+            argument.</h5>
+
+        <h6 id="user">user</h6>
+        <h6 id="votes">votes</h6>
+
+        <h5>As an addition to the great answer by rsp, it's also worth noting that this behavior makes logical sense.
+            Non-default, non-parameter-pack arguments cannot follow a default argument without resulting the in the
+            requirement that the default argument has to be specified--in which case it is no longer a default
+            argument.</h5>
+
+        <h6 id="user">user</h6>
+        <h6 id="votes">votes</h6>
+
+    </div>
+</div>
 </body>
 </html>
