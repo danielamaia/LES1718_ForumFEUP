@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Comment
 {
 
-    //auto-gen id
+
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
