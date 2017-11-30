@@ -8,11 +8,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.inject.Inject;
 import java.io.IOException;
 
 @RestController
 public class CommentWS {
-
+    @Inject
     private CommentService commentService;
     ObjectMapper objectMapper = new ObjectMapper();
 

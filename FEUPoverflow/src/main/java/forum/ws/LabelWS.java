@@ -12,7 +12,7 @@ import java.io.IOException;
 
 @RestController
 public class LabelWS {
-
+    @Inject
     private LabelService labelService;
     ObjectMapper objectMapper = new ObjectMapper();
 

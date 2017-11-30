@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 public class UserTest {
     @Test
     public void getId() throws Exception {
+
         Long expectedId = 12L;
         User user = new User();
         user.setId(expectedId);
@@ -45,6 +46,18 @@ public class UserTest {
 
     @Test
     public void getEmail() throws Exception {
+    }
+
+    @Test
+    public void setEmail() throws Exception {
+    }
+
+    @Test
+    public void getPassWord() throws Exception {
+    }
+
+    @Test
+    public void setPassWord() throws Exception {
     }
 
 }
