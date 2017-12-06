@@ -15,8 +15,5 @@ public class LabelTest {
         Assert.assertEquals(expectedId, actualId);
     }
 
-    @Test
-    public void setId() throws Exception {
-    }
 
 }

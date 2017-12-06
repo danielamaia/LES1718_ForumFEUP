@@ -17,23 +17,21 @@ public class PostTest {
     }
 
     @Test
-    public void setId() throws Exception {
-    }
-
-    @Test
     public void getTitle() throws Exception {
     }
 
-    @Test
-    public void setTitle() throws Exception {
-    }
+  
 
     @Test
     public void getContent() throws Exception {
+         String expectedContent = "test";
+        Post post = new Post();
+        post.setContent(expectedContent);
+        String actualContent = post.getContent();
+        Assert.assertEquals(expectedContent, actualContent);
+    
     }
 
-    @Test
-    public void setContent() throws Exception {
-    }
+   
 
 }
