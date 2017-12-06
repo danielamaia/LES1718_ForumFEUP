@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <div id="header">
+        <link href="community.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+        <title>FEUPOverflow</title>
+        <img id="img" src="https://i.imgur.com/mp8zMLB.png"
+             style="height: auto; width: auto; max-width: 20%; max-height: 20%; margin-left: 5%;"/>
+
+        <script type="text/javascript">
+            document.getElementById("img").onclick = function () {
+                location.href = "index.html";
+            };
+        </script>
+        <button id="profile">User Name</button>
+
+        <script type="text/javascript">
+            document.getElementById("profile").onclick = function () {
+                location.href = "profile.html";
+            };
+        </script>
+
+        <button id="community">Community</button>
+
+        <script type="text/javascript">
+            document.getElementById("community").onclick = function () {
+                location.href = "community.html";
+            };
+        </script>
+
+    </div>
+</head>
+
+<body>
+<div id="margin">
+    <div id="topics">
+
+        <table id="example" class="display" width="100%" cellspacing="0">
+
+            <tbody>
+            <tr>
+                <td id="titel">User</td>
+                <td>Posts</td>
+                <td>Comments</td>
+            </tr>
+            <tr>
+                <td id="titel">User1</td>
+                <p th:text="${post.title}" class="col-md-6" style="margin: 10px"/>
+                <script type="text/javascript">
+                    document.getElementById("titel").onclick = function () {
+                        location.href = "profile.html";
+                    };
+                </script>
+                <td>20</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td id="titel">User2</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td id="titel">User3</td>
+                <td>12</td>
+                <td>31</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <script type="text/javascript" charset="utf8"
+                src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+        <meta charset="utf-8">
+        <script>$(document).ready(function () {
+            $('#example').DataTable({
+                "initComplete": function () {
+                    var api = this.api();
+                    api.$('td').click(function () {
+                        api.search(this.innerHTML).draw();
+                    });
+                }
+            });
+        });
+        </script>
+    </div>
+</div>
+</body>
+</html>

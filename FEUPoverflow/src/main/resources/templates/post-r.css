@@ -54,6 +54,17 @@ body {
     float: right;
 }
 
+#community{
+    border: none;
+    background-color: white;
+    color: #8c2d19;
+    font-family: "Lucida Sans Unicode";
+    font-size: large;
+    float: right;
+    margin-right: 6%;
+    margin-top: 1%;
+}
+
 #comments {
     margin-top: 5%;
     margin-left: 5%;
@@ -64,4 +75,14 @@ body {
 
 #votes{
     margin-bottom: 5%;
+}
+
+#commentBox{
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+#btn-submit{
+    margin-left: 5%;
+    margin-bottom: 2%;
 }

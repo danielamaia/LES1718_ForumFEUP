@@ -40,6 +40,17 @@ body {
     margin-right: 5%;
 }
 
+#community{
+    border: none;
+    background-color: white;
+    color: #8c2d19;
+    font-family: "Lucida Sans Unicode";
+    font-size: large;
+    float: right;
+    margin-right: 6%;
+    margin-top: 1%;
+}
+
 #avatar {
     margin-top: 2%;
     float: left;

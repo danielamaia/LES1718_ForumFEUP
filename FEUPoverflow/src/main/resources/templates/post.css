@@ -22,6 +22,17 @@
     margin-top: 1%;
 }
 
+#community{
+    border: none;
+    background-color: white;
+    color: #8c2d19;
+    font-family: "Lucida Sans Unicode";
+    font-size: large;
+    float: right;
+    margin-right: 6%;
+    margin-top: 1%;
+}
+
 body {
     background-color: #8c2d19;
     text-align: justify;
