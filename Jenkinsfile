@@ -7,7 +7,7 @@ node {
         
     stage ('Build Jars')
     if(!isUnix()){
-        bat 'cd FEUPOverflow && gradlew jar'
+        bat 'cd FEUPOverflow@tmp && gradlew jar'
     }else{
         sh 'cd FEUPOverflow && ./gradlew jar'
     }
