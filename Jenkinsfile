@@ -9,7 +9,7 @@ node {
     if(!isUnix()){
         bat 'cd FEUPOverflow && gradlew jar'
     }else{
-        sh 'cd FEUPOverflow@tmp && ./gradlew jar'
+        sh 'cd /FEUPOverflow && ./gradlew jar'
     }
 
     stage ('Unit Tests')
