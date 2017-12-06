@@ -15,16 +15,12 @@ public class VoteTest {
         Assert.assertEquals(expectedId, actualId);
     }
 
-    @Test
-    public void setId() throws Exception {
-    }
+  
 
     @Test
     public void getValue() throws Exception {
     }
 
-    @Test
-    public void setValue() throws Exception {
-    }
+  
 
 }
