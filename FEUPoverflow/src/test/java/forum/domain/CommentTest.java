@@ -22,6 +22,11 @@ public class CommentTest {
 
     @Test
     public void getContent() throws Exception {
+         String expectedContent = "test";
+        Comment comment = new Comment();
+        comment.setContent(expectedContent);
+        String actualContent = comment.getContent();
+        Assert.assertEquals(expectedContent, actualContent);
     }
 
     @Test
