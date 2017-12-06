@@ -16,10 +16,7 @@ public class CommentTest {
 
     }
 
-    @Test
-    public void setId() throws Exception {
-    }
-
+  
     @Test
     public void getContent() throws Exception {
          String expectedContent = "test";
@@ -29,8 +26,6 @@ public class CommentTest {
         Assert.assertEquals(expectedContent, actualContent);
     }
 
-    @Test
-    public void setContent() throws Exception {
-    }
+  
 
 }
