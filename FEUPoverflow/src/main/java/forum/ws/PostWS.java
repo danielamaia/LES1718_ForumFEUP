@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 public class PostWS {
@@ -55,6 +56,12 @@ public class PostWS {
         Post post = postService.getPostById(id);
         postService.removePost(post);
         return new ResponseEntity<Void>(HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/post", method = RequestMethod.GET)
+    public ResponseEntity<List<Post>> readAll(){
+        List<Post> posts = postService.getAllPosts();
+        return new ResponseEntity<List<Post>>(posts, HttpStatus.OK);
     }
 
 }

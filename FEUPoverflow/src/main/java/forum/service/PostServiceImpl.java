@@ -4,6 +4,7 @@ import forum.domain.Post;
 import forum.domain.PostRepository;
 import org.springframework.stereotype.Service;
 import javax.inject.Inject;
+import java.util.List;
 
 @Service
 public class PostServiceImpl implements PostService {
@@ -29,5 +30,10 @@ public class PostServiceImpl implements PostService {
     @Override
     public void removePost(Post post) {
         postRepository.delete(post);
+    }
+
+    @Override
+    public List<Post> getAllPosts() {
+        return (List<Post>) postRepository.findAll();
     }
 }

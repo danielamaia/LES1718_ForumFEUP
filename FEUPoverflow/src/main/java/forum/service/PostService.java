@@ -3,6 +3,8 @@ package forum.service;
 import forum.domain.*;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public interface PostService {
 
@@ -10,4 +12,5 @@ public interface PostService {
     Post getPostById(Long id);
     void updatePost(Post newPost);
     void removePost(Post post);
+    List<Post> getAllPosts();
 }
