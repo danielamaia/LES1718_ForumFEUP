@@ -9,7 +9,7 @@ node {
     if(!isUnix()){
         bat 'cd FEUPOverflow && gradlew jar'
     }else{
-        sh 'sleep 30 cd /var/lib/jenkins/workspace/FEUPOverflow@tmp/FEUPOverflow && gradle jar'
+        sh 'sleep 30 && cd /var/lib/jenkins/workspace/FEUPOverflow@tmp/FEUPOverflow && gradle jar'
     }
 
     stage ('Unit Tests')
