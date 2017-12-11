@@ -1,4 +1,4 @@
-package forum.service;
+/*package forum.service;
 
 import forum.domain.Vote;
 import forum.domain.VoteRepository;

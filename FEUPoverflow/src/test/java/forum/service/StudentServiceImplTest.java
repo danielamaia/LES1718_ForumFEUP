@@ -1,4 +1,4 @@
-package forum.service;
+/*package forum.service;
 
 import forum.domain.Student;
 import forum.domain.StudentRepository;
