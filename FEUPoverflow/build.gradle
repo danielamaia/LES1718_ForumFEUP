@@ -11,6 +11,26 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'jacoco'
+
+// Jacoco Configuration
+jacocoTestReport {
+  reports {
+    xml.enabled true
+    csv.enabled false
+    // html.destination "${buildDir}/jacocoHtml"
+  }
+
+/*jacoco {
+  applyTo ofbizIntegrationTests
+}
+
+task ofbizCodeCoverageReport(type:JacocoReport){
+  executionData ofbizIntegrationTests
+  sourceSets sourceSets.main
+}/*
+
+test.ignoreFailures = true
 
 jar {
     baseName = 'gs-accessing-data-jpa'
