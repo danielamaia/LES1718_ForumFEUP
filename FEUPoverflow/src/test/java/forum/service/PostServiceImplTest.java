@@ -34,4 +34,4 @@ public class PostServiceImplTest {
     public void removePost() throws Exception {
     }
 
-}
+}*/
