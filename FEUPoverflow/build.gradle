@@ -29,7 +29,7 @@ jacocoTestReport {
 task ofbizCodeCoverageReport(type:JacocoReport){
   executionData ofbizIntegrationTests
   sourceSets sourceSets.main
-}/*
+}*/
 
 test.ignoreFailures = true
 
