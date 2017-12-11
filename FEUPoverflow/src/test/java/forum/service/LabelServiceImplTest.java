@@ -34,4 +34,4 @@ public class LabelServiceImplTest {
     public void removeLabel() throws Exception {
     }
 
-}
+}*/
