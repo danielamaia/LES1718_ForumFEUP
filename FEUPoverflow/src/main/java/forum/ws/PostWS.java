@@ -8,9 +8,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.inject.Inject;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 @Controller
@@ -31,6 +34,14 @@ public class PostWS {
         Post post = postService.getPostById(id);
         model.addAttribute(post);
         return "post-read";
+    }
+
+    @RequestMapping("/post/index")
+    public String index(Model model) {
+        Iterable<Post> postsIterable = postService.getPosts();
+        model.addAttribute("posts", postsIterable);
+
+        return "post-index";
     }
 
 //    @RequestMapping(value = "/post/{id}", method = RequestMethod.GET)
@@ -56,12 +67,6 @@ public class PostWS {
         Post post = postService.getPostById(id);
         postService.removePost(post);
         return new ResponseEntity<Void>(HttpStatus.OK);
-    }
-
-    @RequestMapping(value = "/post", method = RequestMethod.GET)
-    public ResponseEntity<List<Post>> readAll(){
-        List<Post> posts = postService.getAllPosts();
-        return new ResponseEntity<List<Post>>(posts, HttpStatus.OK);
     }
 
 }

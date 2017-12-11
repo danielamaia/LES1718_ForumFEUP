@@ -1,6 +1,7 @@
 package forum.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "ACCOUNT")
@@ -14,6 +15,10 @@ public class User {
     private String nickName;
     private String email;
     private String passWord;
+    private List<Comment> comments;
+    private List<Vote> votes;
+    private List<Post> posts;
+
 
     public Long getId() {
         return id;
