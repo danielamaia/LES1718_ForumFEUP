@@ -33,4 +33,4 @@ public class VoteServiceImplTest {
     public void removeVote() throws Exception {
     }
 
-}
+}*/
