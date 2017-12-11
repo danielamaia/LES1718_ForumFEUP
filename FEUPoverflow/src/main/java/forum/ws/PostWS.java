@@ -65,6 +65,13 @@ public class PostWS {
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/post/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Void> updatePost(@PathVariable Long id){
+        Post post = postService.getPostById(id);
+        postService.updatePost(post);
+        return new ResponseEntity<Void>(HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/post/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Void> removePost(@PathVariable Long id){
         Post post = postService.getPostById(id);
@@ -76,6 +83,6 @@ public class PostWS {
      public ResponseEntity<List<Post>> readAll(){
                 List<Post> posts = postService.getPosts();
                 return new ResponseEntity<List<Post>>(posts, HttpStatus.OK);
-            }
+    }
 
 }
