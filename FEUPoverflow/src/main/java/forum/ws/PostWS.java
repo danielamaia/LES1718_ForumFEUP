@@ -69,4 +69,10 @@ public class PostWS {
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/post", method = RequestMethod.GET)
+     public ResponseEntity<List<Post>> readAll(){
+                List<Post> posts = postService.getPosts();
+                return new ResponseEntity<List<Post>>(posts, HttpStatus.OK);
+            }
+
 }

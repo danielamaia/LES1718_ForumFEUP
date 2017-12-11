@@ -1,10 +1,7 @@
 // tag::sample[]
 package forum.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -15,9 +12,9 @@ public class Post {
     private Long id;
     private String title;
     private String content;
+    @OneToMany
     private List<Comment> comments;
-    private List<Vote> votes;
-    private List<Label> labels;
+
 
     public Long getId() {
         return id;

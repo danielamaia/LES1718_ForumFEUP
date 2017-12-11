@@ -34,7 +34,8 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Iterable<Post> getPosts() {
-         return postRepository.findAll();
+    public List<Post> getPosts() {
+         return (List<Post>) postRepository.findAll();
     }
+
 }
