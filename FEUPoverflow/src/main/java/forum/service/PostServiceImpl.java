@@ -3,6 +3,7 @@ package forum.service;
 import forum.domain.Post;
 import forum.domain.PostRepository;
 import org.springframework.stereotype.Service;
+
 import javax.inject.Inject;
 import java.util.List;
 
@@ -33,7 +34,8 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public List<Post> getAllPosts() {
-        return (List<Post>) postRepository.findAll();
+    public List<Post> getPosts() {
+         return (List<Post>) postRepository.findAll();
     }
+
 }

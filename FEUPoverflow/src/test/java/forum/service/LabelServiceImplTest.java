@@ -1,4 +1,4 @@
-package forum.service;
+/*package forum.service;
 
 import forum.domain.Label;
 import forum.domain.LabelRepository;
@@ -34,4 +34,4 @@ public class LabelServiceImplTest {
     public void removeLabel() throws Exception {
     }
 
-}
+}*/

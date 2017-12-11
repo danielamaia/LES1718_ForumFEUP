@@ -12,5 +12,5 @@ public interface PostService {
     Post getPostById(Long id);
     void updatePost(Post newPost);
     void removePost(Post post);
-    List<Post> getAllPosts();
+    List<Post> getPosts();
 }

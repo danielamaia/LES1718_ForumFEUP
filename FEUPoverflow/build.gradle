@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        mavenLocal()
         mavenCentral()
     }
     dependencies {
@@ -33,13 +34,14 @@ task ofbizCodeCoverageReport(type:JacocoReport){
 test.ignoreFailures = true
 
 jar {
-    baseName = 'gs-accessing-data-jpa'
+    baseName = 'FEUPoverflow'
     version =  '0.1.0'
 }
 
 repositories {
     mavenCentral()
     maven { url "https://repository.jboss.org/nexus/content/repositories/releases" }
+    maven { url 'http://repo1.maven.org/maven2' }
 }
 
 sourceCompatibility = 1.8
@@ -48,6 +50,8 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("com.h2database:h2")
+    compile('javax.inject:javax.inject:1')
+    compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 

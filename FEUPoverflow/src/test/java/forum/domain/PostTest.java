@@ -18,6 +18,11 @@ public class PostTest {
 
     @Test
     public void getTitle() throws Exception {
+        String expectedTitle = "Test";
+        Post post = new Post();
+        post.setTitle(expectedTitle);
+        String actualTitle = post.getTitle();
+        Assert.assertEquals(expectedTitle, actualTitle);
     }
 
   

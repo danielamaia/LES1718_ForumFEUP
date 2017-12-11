@@ -19,6 +19,11 @@ public class VoteTest {
 
     @Test
     public void getValue() throws Exception {
+        Boolean expectedValue =true;
+        Vote vote = new Vote();
+        vote.setValue(expectedValue);
+        Boolean actualValue = vote.getValue();
+        Assert.assertEquals(expectedValue, actualValue);
     }
 
   

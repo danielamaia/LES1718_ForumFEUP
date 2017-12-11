@@ -1,4 +1,4 @@
-package forum.service;
+/*package forum.service;
 
 import forum.domain.Comment;
 import forum.domain.CommentRepository;
@@ -36,4 +36,4 @@ public class CommentServiceImplTest {
     public void removeComment() throws Exception {
     }
 
-}
+}*/

@@ -1,4 +1,4 @@
-package forum.service;
+/*package forum.service;
 
 import forum.domain.Student;
 import forum.domain.StudentRepository;
@@ -35,4 +35,4 @@ public class StudentServiceImplTest {
     public void removeStudent() throws Exception {
     }
 
-}
+}*/

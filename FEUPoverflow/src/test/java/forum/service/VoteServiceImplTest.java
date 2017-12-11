@@ -1,4 +1,4 @@
-package forum.service;
+/*package forum.service;
 
 import forum.domain.Vote;
 import forum.domain.VoteRepository;
@@ -33,4 +33,4 @@ public class VoteServiceImplTest {
     public void removeVote() throws Exception {
     }
 
-}
+}*/

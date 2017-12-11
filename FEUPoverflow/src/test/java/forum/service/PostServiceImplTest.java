@@ -1,4 +1,4 @@
-package forum.service;
+/*package forum.service;
 
 import forum.domain.Post;
 import forum.domain.PostRepository;
@@ -34,4 +34,4 @@ public class PostServiceImplTest {
     public void removePost() throws Exception {
     }
 
-}
+}*/

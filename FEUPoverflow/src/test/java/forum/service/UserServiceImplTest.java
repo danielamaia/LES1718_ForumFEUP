@@ -1,4 +1,4 @@
-package forum.service;
+/*package forum.service;
 
 import forum.domain.User;
 import forum.domain.UserRepository;
@@ -32,4 +32,4 @@ public class UserServiceImplTest {
     public void removeUser() throws Exception {
     }
 
-}
+}*/
