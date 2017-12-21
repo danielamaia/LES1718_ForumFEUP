@@ -16,20 +16,20 @@ class App extends Component {
 <section class="container">
     <div class="login">
       <h1>Login</h1>
-      <form method="post" action="index.html">
-        <p><input type="text" name="login" value="" id="un" placeholder="Username or Email"></input></p>
-        <p><input type="password" name="password" value="" id="pw" placeholder="Password"></input></p>
+      
+        <p><input type="text" name="login" value="upxxxxxxx" id="un" placeholder="Username or Email"></input></p>
+        <p><input type="password" name="password" value="xxxx" id="pw" placeholder="Password"></input></p>
         <p class="remember_me">
           <label>
             <input type="checkbox" name="remember_me" id="remember_me"></input>
             Remember me on this computer
           </label>
         </p>
-        <p class="submit"><input type="submit" name="commit" value="Login"></input></p>
+        <p class="submit"><a href="index2.html"> </a><input type="submit" name="commit"  value="Login"></input></p>
         
         
         <p class="submit"><input type="submit" name="commit" value="Sign Up"></input></p>
-      </form>
+
     </div>
 
     <div class="login-help">
@@ -37,7 +37,8 @@ class App extends Component {
     </div>
   </section>
 
- function register(){};
+  
+
 
 </body>
       </div>

@@ -1,0 +1,45 @@
+#header {
+    background-color: #ffffff;
+}
+
+#log {
+    height: auto;
+    width: auto;
+    max-width: 20%;
+    max-height: 20%;
+    margin-left: 5%;
+
+}
+
+
+body {
+    background-color: #8c2d19
+}
+
+#margin {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #ffffff
+}
+
+#topics {
+    height: 100%;
+    margin-top: 5%;
+    background-color: #ffffff;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#stats{
+    margin-top: 3%;
+    border-bottom-style: solid;
+}
+
+#descri{
+    text-align: justify;
+    margin-top: 2%;
+}
+#c{
+    margin-top: 3%;
+    border-bottom-style: solid;
+}
