@@ -1,0 +1,23 @@
+.Posts {
+  text-align: center;
+background-color: #8c2d19 ;
+height: 1000px;
+
+}
+
+.Posts-logo {
+height:100px ;
+width:550px;
+
+}
+
+.Posts-header {
+  background-color: #222;
+  height: 100px;
+
+
+
+}
+.Posts-body{
+background-color: #8c2d19 
+}
